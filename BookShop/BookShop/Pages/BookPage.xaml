@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BookShop.Pages.BookPage"
+             NavigationPage.HasNavigationBar="False" BackgroundColor="#292626">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="0">
+                <StackLayout BackgroundColor="#303030" Orientation="Horizontal">
+                    <Label
+                    Padding="10,20"
+                    FontAttributes="None"
+                    FontFamily="MaterialIconsFont"
+                    FontSize="43"
+                    HorizontalOptions="Start"
+                    Text="chevron_left"
+                    TextColor="Gray"
+                    VerticalOptions="CenterAndExpand">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="BackBtn" Tapped="BackBtn_Tapped" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <StackLayout
+                    x:Name="AdminPanel"
+                    Padding="0,0,10,0"
+                    BackgroundColor="White"
+                    HorizontalOptions="EndAndExpand"
+                    IsVisible="False"
+                    Orientation="Horizontal"
+                    VerticalOptions="CenterAndExpand">
+                        <Label
+                        FontFamily="MaterialIconsFont"
+                        FontSize="27"
+                        Text="edit">
+                        </Label>
+                        <Label
+                        FontFamily="MaterialIconsFont"
+                        FontSize="27"
+                        Text="delete">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer x:Name="deleteBtn" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout BackgroundColor="#303030">
+                    <Image
+                    HeightRequest="200"
+                    Source="{Binding Image}"
+                    WidthRequest="200"/>
+                </StackLayout>
+
+                <StackLayout
+                Margin="0,10,0,0"
+                Padding="20,10,0,0"
+                BackgroundColor="#303030">
+                    <Label
+                    FontSize="24"
+                    Text="{Binding Name}"
+                    TextColor="White"/>
+                    <Label 
+                    FontSize="11"
+                    Text="Автор:"
+                    TextColor="Gray"/>
+                    <Label
+                    FontSize="11"
+                    Text="{Binding Aut}"
+                    TextColor="gray"/>
+                    <Label 
+                    FontSize="11"
+                    Text="Страна:"
+                    TextColor="Gray"/>
+                    <Label 
+                    FontSize="11"
+                    Text="{Binding Country}"
+                    TextColor="Gray"/>
+                    <Label 
+                    FontSize="11"
+                    Text="Год:"
+                    TextColor="Gray"/>
+                    <Label 
+                    FontSize="11"
+                    Text="{Binding Year}"
+                    TextColor="Gray"/>
+                    <Label 
+                    FontSize="11"
+                    Text="Жанр:"
+                    TextColor="Gray"/>
+                    <Label 
+                    FontSize="11"
+                    Text="{Binding Genre}"
+                    TextColor="Gray"/>
+                    <Label 
+                    FontSize="11"
+                    Text="Цена:"
+                    TextColor="Gray"/>
+                    <Label 
+                    FontSize="11"
+                    Text="{Binding Price}"
+                    TextColor="Gray"/>
+
+                    <Label 
+                    FontSize="11"
+                    Text="Описание:"
+                    TextColor="Gray"/>
+                    <Label 
+                    FontSize="11"
+                    Text="{Binding Description}"
+                    TextColor="Gray"/>
+                </StackLayout>
+                <StackLayout
+                Margin="0,10,0,0"
+                Padding="20,0"
+                BackgroundColor="#303030"
+                Orientation="Horizontal">
+                    <StackLayout HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand">
+                        <Label
+                        FontSize="14"
+                        Text="Цена"
+                        TextColor="White" />
+                        <Label
+                        FontSize="18"
+                        Text="{Binding Price}"
+                        TextColor="White" />
+                    </StackLayout>
+                    <Button
+                    x:Name="ForBasketBtn"
+                    Margin="0,10"
+                    Padding="20,7"
+                    BackgroundColor="#F06B6D"
+                    CornerRadius="5"
+                    HorizontalOptions="EndAndExpand"
+                    Text="В корзину"
+                    TextColor="White" />
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

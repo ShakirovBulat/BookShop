@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BookShop.TabbedPages.SearchPage" NavigationPage.HasNavigationBar="False"
+             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             BackgroundColor="#292626">
+
+
+    <StackLayout>
+        <Frame
+            Margin="0"
+            Padding="0"
+            BackgroundColor="#393939">
+            <StackLayout>
+                <StackLayout>
+                    <Label
+                        Padding="20"
+                        FontSize="24"
+                        Text="Поиск"
+                        TextColor="#FCC046" />
+                </StackLayout>
+                <Frame
+                    Margin="20,0,20,20"
+                    Padding="0"
+                    CornerRadius="7">
+                    <SearchBar
+                        x:Name="searchBar"
+                        IsSpellCheckEnabled="True"
+                        Placeholder="Search"
+                        PlaceholderColor="#DBDBDB"
+                        TextColor="Gray" BackgroundColor="White"/>
+                </Frame>
+                <StackLayout
+                    HorizontalOptions="EndAndExpand"
+                    Orientation="Horizontal"
+                    Margin="20,0"
+                    VerticalOptions="StartAndExpand">
+                    <Button
+                            x:Name="GenreBtn"
+                            BackgroundColor="Transparent"
+                            FontSize="14"
+                            Text="Жанр книги"
+                            TextColor="#C5C7FF" 
+                        TextTransform="None"/>
+                    <BoxView x:Name="GenreBoxVw"/>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+        
+        <StackLayout>
+            <ListView
+                x:Name="GoodsFilterLstView"
+                HasUnevenRows="True"
+                HorizontalOptions="StartAndExpand"
+                IsPullToRefreshEnabled="True"
+                SeparatorVisibility="None">
+                
+            </ListView>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

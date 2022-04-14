@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BookShop.RegistrationPage"
+             Visual="Material"
+             BackgroundImageSource="FonLogUp.jpg"
+             NavigationPage.HasNavigationBar="False">
+    <StackLayout>
+        <StackLayout Orientation="Horizontal" >
+            <Label Padding="10,20"
+            FontAttributes="None"
+            FontFamily="MaterialIconsFont"
+            FontSize="43"
+            HorizontalOptions="Start"
+            Text="chevron_left"
+            TextColor="#585858"
+            VerticalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="Back" Tapped="Back_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Text="Регистрация" TextColor="#585858" FontSize="24" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+        
+        <StackLayout Margin="50,0" Spacing="20">
+            <Label Text="ФИО" TextColor="#ACACAC"/>
+            <Entry x:Name="FIOEntry" BackgroundColor="#303030" TextColor="#ACACAC"/>
+
+            <Label Text="Номер телефона" TextColor="#ACACAC"/>
+            <Entry x:Name="TelNumberEntry" BackgroundColor="#303030" TextColor="#ACACAC" Keyboard="Telephone"/>
+
+            <Label Text="Логин" TextColor="#ACACAC"/>
+            <Entry x:Name="LoginEntry" BackgroundColor="#303030" TextColor="#ACACAC"/>
+
+            <Label Text="Пароль" TextColor="#ACACAC"/>
+            <Entry x:Name="PassEntry" BackgroundColor="#303030" TextColor="#ACACAC"/>
+
+            <Button x:Name="RegisterBtn" Text="Зарегистрироваться"
+                    Clicked="RegisterBtn_Clicked"
+                        Padding="20,10"
+                    Margin="30"
+                        BorderColor="#FFBE65"
+                        BorderWidth="2"
+                        BackgroundColor="#2A2A2A"
+                        CornerRadius="10"
+                        FontSize="14"
+                        TextColor="#FFBE65"
+                        TextTransform="None"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

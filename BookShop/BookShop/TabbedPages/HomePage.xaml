@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             x:Class="BookShop.TabbedPages.HomePage"
+             NavigationPage.HasNavigationBar="False" BackgroundColor="#292626">
+
+
+    <StackLayout>
+        <Frame Margin="0" Padding="0" BackgroundColor="#393939">
+            <StackLayout>
+                <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand">
+                    <Label
+                        Padding="30"
+                        FontSize="24"
+                        Text="Главная"
+                        TextColor="#FCC046" />
+                    <StackLayout
+                        x:Name="AdminPanel"
+                        Margin="0,0,25,0"
+                        HorizontalOptions="EndAndExpand"
+                        IsVisible="False"
+                        Orientation="Horizontal">
+                        <Label
+                            FontFamily="MaterialIconsFont"
+                            FontSize="Title"
+                            HorizontalOptions="EndAndExpand"
+                            Text="&#xe145;"
+                            TextColor="#FCC046"
+                            VerticalOptions="Center">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout
+                    HorizontalOptions="CenterAndExpand"
+                    Orientation="Horizontal"
+                    VerticalOptions="StartAndExpand">
+                    <StackLayout>
+                        <Button
+                            x:Name="FantasyBtn"
+                            BackgroundColor="Transparent"
+                            FontSize="14"
+                            Text="Фэнтези"
+                            TextColor="#8B8DC0" />
+                        <BoxView
+                            x:Name="FantasyBoxVw"
+                            Margin="15,-10,15,10"
+                            HeightRequest="1"
+                            Color="#8B8DC0" />
+                    </StackLayout>
+                    <StackLayout>
+                        <Button
+                            x:Name="DetectivBtn"
+                            BackgroundColor="Transparent"
+                            FontSize="14"
+                            Text="Детектив"
+                            TextColor="#8B8DC0" />
+                        <BoxView
+                            x:Name="DetectivBoxVw"
+                            Margin="15,-10,15,10"
+                            HeightRequest="1"
+                            IsVisible="False"
+                            Color="#8B8DC0" />
+                    </StackLayout>
+                    <StackLayout>
+                        <Button
+                            x:Name="TravelBtn"
+                            BackgroundColor="Transparent"
+                            BorderColor="White"
+                            BorderWidth="0"
+                            FontSize="14"
+                            Text="Приключения"
+                            TextColor="#8B8DC0" />
+                        <BoxView
+                            x:Name="TravelBoxVw"
+                            Margin="15,-10,15,10"
+                            HeightRequest="1"
+                            IsVisible="False"
+                            Color="#8B8DC0" />
+                    </StackLayout>
+                    <StackLayout>
+                        <Button
+                            x:Name="Horror"
+                            BackgroundColor="Transparent"
+
+                            FontSize="14"
+                            Text="Ужасы"
+                            TextColor="#8B8DC0" />
+                        <BoxView
+                            x:Name="HorrorBoxVw"
+                            Margin="15,-10,15,10"
+                            HeightRequest="1"
+                            IsVisible="False"
+                            Color="#8B8DC0" />
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+        <ListView
+                x:Name="GoodsLstViw"
+                HasUnevenRows="True"
+                HorizontalOptions="Fill"
+                IsPullToRefreshEnabled="True"
+                ItemTapped="GoodsLstViw_ItemTapped"
+                SeparatorVisibility="None">
+            
+        </ListView>
+    </StackLayout>
+
+</ContentPage>

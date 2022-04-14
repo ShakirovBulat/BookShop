@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BookShop.Pages.ReviewsPage" 
+             NavigationPage.HasNavigationBar="False" BackgroundColor="#292626">
+
+    <StackLayout>
+        <StackLayout
+            BackgroundColor="#393939"
+            Orientation="Horizontal"
+            VerticalOptions="StartAndExpand">
+            <Label
+                x:Name=" fe"
+                Padding="10,20"
+                FontAttributes="None"
+                FontFamily="MaterialIconsFont"
+                FontSize="43"
+                HorizontalOptions="Start"
+                Text="chevron_left"
+                TextColor="White"
+                VerticalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Label
+                VerticalOptions="CenterAndExpand"
+                Margin="0,0,50,0"
+                FontSize="20"
+                Text="Отзывы"
+                TextColor="White" HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+        <StackLayout VerticalOptions="FillAndExpand">
+            <ListView
+                x:Name="ReviewsLst"
+                HasUnevenRows="True"
+                HorizontalOptions="StartAndExpand"
+                IsPullToRefreshEnabled="True"
+                SeparatorVisibility="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:Name="qw1">
+                        <ViewCell x:Name="qw2">
+                            <StackLayout x:Name="qw3" Padding="10">
+                                <Frame x:Name="qw4" CornerRadius="20">
+                                    <StackLayout x:Name="qw5" Orientation="Horizontal">
+                                        <StackLayout x:Name="qw6">
+                                            <Label
+                                                FontSize="17"
+                                                Text="{Binding FIO}"
+                                                TextColor="#6D6D6D" />
+                                            <Label
+                                                FontSize="15"
+                                                Text="{Binding ReviewText}"
+                                                TextColor="#9A9A9A" />
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label
+                                                    x:Name="star1"
+                                                    FontFamily="MaterialIconsFont"
+                                                    FontSize="24"
+                                                    Text="star"
+                                                    TextColor="{Binding Star1}"
+                                                    VerticalOptions="CenterAndExpand" />
+                                                <Label
+                                                    x:Name="star2"
+                                                    FontFamily="MaterialIconsFont"
+                                                    FontSize="24"
+                                                    Text="star"
+                                                    TextColor="{Binding Star2}"
+                                                    VerticalOptions="CenterAndExpand" />
+                                                <Label
+                                                    x:Name="star3"
+                                                    FontFamily="MaterialIconsFont"
+                                                    FontSize="24"
+                                                    Text="star"
+                                                    TextColor="{Binding Star3}"
+                                                    VerticalOptions="CenterAndExpand" />
+                                                <Label
+                                                    x:Name="star4"
+                                                    FontFamily="MaterialIconsFont"
+                                                    FontSize="24"
+                                                    Text="star"
+                                                    TextColor="{Binding Star4}"
+                                                    VerticalOptions="CenterAndExpand" />
+                                                <Label
+                                                    x:Name="star5"
+                                                    FontFamily="MaterialIconsFont"
+                                                    FontSize="24"
+                                                    Text="star"
+                                                    TextColor="{Binding Star5}"
+                                                    VerticalOptions="CenterAndExpand" />
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+
+        <StackLayout
+            Padding="30"
+            BackgroundColor="#393939"
+            HorizontalOptions="FillAndExpand"
+            Orientation="Horizontal"
+            VerticalOptions="EndAndExpand">
+            <Label Text="Хотите оставить отзыв?"  TextColor="White"/>
+            <Button
+                CornerRadius="10"
+                BackgroundColor="#F16F54"
+                HorizontalOptions="EndAndExpand"
+                Text="Оценить"
+                TextColor="White" 
+                Clicked="Button_Clicked"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

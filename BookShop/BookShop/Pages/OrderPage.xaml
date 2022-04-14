@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BookShop.Pages.OrderPage" 
+             NavigationPage.HasNavigationBar="False" BackgroundColor="#292626">
+
+    <StackLayout>
+        <StackLayout BackgroundColor="#303030" Orientation="Horizontal">
+            <Label
+                Padding="10,20"
+                FontAttributes="None"
+                FontFamily="MaterialIconsFont"
+                FontSize="43"
+                HorizontalOptions="Start"
+                Text="chevron_left"
+                TextColor="White"
+                VerticalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Label.GestureRecognizers>
+            </Label>
+            <Label
+                FontSize="20"
+                Text="Оформление заказа"
+                TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+
+        <ScrollView>
+            <StackLayout>
+                <StackLayout>
+                    <Label
+                            Margin="20,10,0,0"
+                            FontSize="18"
+                            Text="Адрес доставки:"
+                            TextColor="White" />
+                    <Frame BackgroundColor="#303030">
+                        <Label Text="Бари Галеева 3а" TextColor="#ACACAC" BackgroundColor="#303030"/>
+                    </Frame>
+                </StackLayout>
+                <StackLayout BackgroundColor="#303030">
+                    <Label
+                            Margin="20,20,0,0"
+                            FontSize="18"
+                            Text="Получатель заказа:"
+                            TextColor="White" />
+                    <Frame BackgroundColor="#303030">
+                        <Entry x:Name="FIOEntry" Placeholder="ФИО" PlaceholderColor="#ACACAC"/>
+                    </Frame>
+                    <Frame BackgroundColor="#303030">
+                        <Entry
+                                Keyboard="Telephone"
+                                Placeholder="Номер телефона"
+                            PlaceholderColor="#ACACAC"
+                                Text="{Binding TelephoneNumber}" />
+                    </Frame>
+                    <Label
+                            Margin="10"
+                            FontSize="12"
+                            Text="Мы пришлем уведомление о статусе заказа на указанные вами телефон" TextColor="#ACACAC" />
+                    <Label Margin="10"
+                            FontSize="12" Text="Оплата заказа происходит в пункте выдачи" TextColor="#ACACAC"/>
+                </StackLayout>
+
+                <StackLayout Margin="20,10">
+                    <StackLayout>
+                        <Label
+                                Margin="20,30,0,0"
+                                FontSize="18"
+                                Text="Ваш заказ:"
+                                TextColor="White" />
+                        <StackLayout Orientation="Horizontal">
+                            <Label
+                                    x:Name="AmountLbl"
+                                    Margin="20,10"
+                                    Text="Товары (8):" TextColor="White"/>
+                            <Label
+                                    x:Name="SumLbl"
+                                    Margin="0,0,30,0"
+                                    FontSize="18"
+                                    HorizontalOptions="EndAndExpand"
+                                    Text="30 000 Р"
+                                    TextColor="White" />
+                        </StackLayout>
+
+                        <Frame BackgroundColor="#474747">
+                            <Label FontSize="12" Text="Размещая заказ, вы соглашаетесь на обработку персональных данных в соответствии с Условиями" 
+                                   TextColor="#ACACAC"/>
+                        </Frame>
+                        <StackLayout Margin="0,20" Orientation="Horizontal">
+                            <Label
+                                    Margin="20,0,0,0"
+                                    FontSize="16"
+                                    Text="Итого:"
+                                    TextColor="White" />
+                            <Label
+                                    x:Name="SumLbl1"
+                                    Margin="0,0,30,0"
+                                    FontSize="18"
+                                    HorizontalOptions="EndAndExpand"
+                                    Text="30 000 Р"
+                                    TextColor="White" />
+                        </StackLayout>
+                        <Button
+                                Margin="80,0"
+                                BackgroundColor="#F06B6D"
+                                Text="Заказать" TextColor="White" TextTransform="None"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>

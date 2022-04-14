@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookShop.Android", "BookShop\BookShop.Android\BookShop.Android.csproj", "{CD95992B-79C9-4B6E-B131-AF5D1F42C1CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookShop", "BookShop\BookShop\BookShop.csproj", "{7DAC50E3-BA52-418A-9B0F-431783B1A81D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD95992B-79C9-4B6E-B131-AF5D1F42C1CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD95992B-79C9-4B6E-B131-AF5D1F42C1CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD95992B-79C9-4B6E-B131-AF5D1F42C1CD}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{CD95992B-79C9-4B6E-B131-AF5D1F42C1CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD95992B-79C9-4B6E-B131-AF5D1F42C1CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD95992B-79C9-4B6E-B131-AF5D1F42C1CD}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{7DAC50E3-BA52-418A-9B0F-431783B1A81D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DAC50E3-BA52-418A-9B0F-431783B1A81D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DAC50E3-BA52-418A-9B0F-431783B1A81D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{7DAC50E3-BA52-418A-9B0F-431783B1A81D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DAC50E3-BA52-418A-9B0F-431783B1A81D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DAC50E3-BA52-418A-9B0F-431783B1A81D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {40670AEC-5E63-4E74-8E81-19918684A241}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BookShop.Pages.UpdateProfilPage" NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#292626">
+
+    <StackLayout>
+        <StackLayout Orientation="Horizontal" >
+            <Label Padding="10,20"
+            FontAttributes="None"
+            FontFamily="MaterialIconsFont"
+            FontSize="43"
+            HorizontalOptions="Start"
+            Text="chevron_left"
+            TextColor="White"
+            VerticalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Text="Редактирование" TextColor="White" FontSize="24" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+
+        <StackLayout Margin="50,0" Spacing="20">
+            <Label Text="ФИО" TextColor="#ACACAC"/>
+            <Entry BackgroundColor="#303030" TextColor="#ACACAC"/>
+
+            <Label Text="Номер телефона" TextColor="#ACACAC"/>
+            <Entry BackgroundColor="#303030" TextColor="#ACACAC"/>
+
+            <Label Text="Логин" TextColor="#ACACAC"/>
+            <Entry BackgroundColor="#303030" TextColor="#ACACAC"/>
+
+            <Label Text="Пароль" TextColor="#ACACAC"/>
+            <Entry BackgroundColor="#303030" TextColor="#ACACAC"/>
+
+            <StackLayout
+                Margin="20,0"
+                Padding="20"
+                BackgroundColor="#303030"
+                Orientation="Horizontal">
+                <Label
+                    FontFamily="MaterialIconsFont"
+                    FontSize="28"
+                    HorizontalOptions="Start"
+                    Text="add"
+                    TextColor="#575757"
+                    VerticalOptions="CenterAndExpand" />
+                <Label
+                    BackgroundColor="#303030"
+                    FontSize="24"
+                    HorizontalOptions="StartAndExpand"
+                    Text="Добавить фото"
+                    TextColor="#575757"
+                    VerticalOptions="CenterAndExpand" />
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer/>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+            <Button x:Name="UpdateProfilBTN" Text="Редактировать"
+                        Padding="20,10"
+                    Margin="30"
+                        BorderColor="#FFBE65"
+                        BorderWidth="2"
+                        BackgroundColor="#2A2A2A"
+                        CornerRadius="10"
+                        FontSize="14"
+                        TextColor="#FFBE65"
+                        TextTransform="None"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
