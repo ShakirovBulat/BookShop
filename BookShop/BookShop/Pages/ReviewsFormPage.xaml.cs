@@ -32,7 +32,7 @@ namespace BookShop.Pages
         {
             Clear();
             star1.TextColor = Color.Yellow;
-            count = 1;
+
         }
 
         private void star2_Tapped(object sender, EventArgs e)
@@ -40,7 +40,7 @@ namespace BookShop.Pages
             Clear();
             star1.TextColor = Color.Yellow;
             star2.TextColor = Color.Yellow;
-            count = 2;
+
         }
 
         private void star3_Tapped(object sender, EventArgs e)
@@ -49,7 +49,7 @@ namespace BookShop.Pages
             star1.TextColor = Color.Yellow;
             star2.TextColor = Color.Yellow;
             star3.TextColor = Color.Yellow;
-            count = 3;
+
         }
 
         private void star4_Tapped(object sender, EventArgs e)
@@ -59,7 +59,7 @@ namespace BookShop.Pages
             star2.TextColor = Color.Yellow;
             star3.TextColor = Color.Yellow;
             star4.TextColor = Color.Yellow;
-            count = 4;
+
         }
 
         private void star5_Tapped(object sender, EventArgs e)
@@ -70,7 +70,6 @@ namespace BookShop.Pages
             star3.TextColor = Color.Yellow;
             star4.TextColor = Color.Yellow;
             star5.TextColor = Color.Yellow;
-            count = 5;
         }
 
         private async void SendBtn_Clicked(object sender, EventArgs e)
