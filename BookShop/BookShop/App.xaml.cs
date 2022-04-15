@@ -5,11 +5,12 @@ namespace BookShop
 {
     public partial class App : Application
     {
-
+        public static TodoItemManager TodoManager { get; private set; }
         public App()
         {
             InitializeComponent();
 
+            TodoManager = new TodoItemManager(new RestService());
             MainPage = new NavigationPage(new MainPage());
         }
 

@@ -24,16 +24,16 @@
         
         <StackLayout Margin="50,0" Spacing="20">
             <Label Text="ФИО" TextColor="#ACACAC"/>
-            <Entry x:Name="FIOEntry" BackgroundColor="#303030" TextColor="#ACACAC"/>
+            <Entry x:Name="FIOEntry" Text="{Binding Path=FIO}" BackgroundColor="#303030" TextColor="#ACACAC"/>
 
             <Label Text="Номер телефона" TextColor="#ACACAC"/>
-            <Entry x:Name="TelNumberEntry" BackgroundColor="#303030" TextColor="#ACACAC" Keyboard="Telephone"/>
+            <Entry x:Name="TelNumberEntry" Text="{Binding Path=Phone}" BackgroundColor="#303030" TextColor="#ACACAC" Keyboard="Telephone"/>
 
             <Label Text="Логин" TextColor="#ACACAC"/>
-            <Entry x:Name="LoginEntry" BackgroundColor="#303030" TextColor="#ACACAC"/>
+            <Entry x:Name="LoginEntry" Text="{Binding Path=Login}" BackgroundColor="#303030" TextColor="#ACACAC"/>
 
             <Label Text="Пароль" TextColor="#ACACAC"/>
-            <Entry x:Name="PassEntry" BackgroundColor="#303030" TextColor="#ACACAC"/>
+            <Entry x:Name="PassEntry" Text="{Binding Path=Password}" BackgroundColor="#303030" TextColor="#ACACAC"/>
 
             <Button x:Name="RegisterBtn" Text="Зарегистрироваться"
                     Clicked="RegisterBtn_Clicked"
